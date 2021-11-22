@@ -186,11 +186,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 100
   hardCollisionDamage: 20
-  softCollisionDamage: 10
-  hardCollisionThreshold: 20
-  softCollisionThreshold: 10
+  mediumCollisionDamage: 10
+  softCollisionDamage: 5
+  hardCollisionThreshold: 4
+  mediumCollisionThreshold: 3
+  softCollisionThreshold: 1
   smokeThreshold: 50
-  smoke: {fileID: 0}
+  smoke: {fileID: 2113956258722431253}
   explosionPrefab: {fileID: 0}
 --- !u!1 &2869962006203673622
 GameObject:
@@ -956,6 +958,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52f1a52f728a9ff40b837e0535765a98, type: 3}
+--- !u!1 &2113956258722431253 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8555971582375439106, guid: 52f1a52f728a9ff40b837e0535765a98, type: 3}
+  m_PrefabInstance: {fileID: 7776206749904562711}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2113956258722431248 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8555971582375439111, guid: 52f1a52f728a9ff40b837e0535765a98, type: 3}

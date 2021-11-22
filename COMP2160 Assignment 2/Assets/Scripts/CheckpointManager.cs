@@ -16,8 +16,6 @@ public class CheckpointManager : MonoBehaviour
     public GameObject checkpoint3;
     public GameObject checkpoint4;
 
-    public GameObject winscreen;
-
     // Amount of health restored by individual checkpoints
     public float CP1HealthRestore = 30;
     public float CP2HealthRestore = 30;
@@ -31,7 +29,6 @@ public class CheckpointManager : MonoBehaviour
         checkpoint2.SetActive(false);
         checkpoint3.SetActive(false);
         checkpoint4.SetActive(false);
-        winscreen.SetActive(false);
     }
 
     void Update()
