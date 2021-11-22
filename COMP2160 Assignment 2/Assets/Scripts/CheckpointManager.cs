@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CheckpointManager : MonoBehaviour
 {
+    public CarHealth carHealth;
 
     public bool CP1 = false;
     public bool CP2 = false;
@@ -17,6 +18,11 @@ public class CheckpointManager : MonoBehaviour
 
     public GameObject winscreen;
 
+    // Amount of health restored by individual checkpoints
+    public float CP1HealthRestore = 30;
+    public float CP2HealthRestore = 30;
+    public float CP3HealthRestore = 30;
+    public float CP4HealthRestore = 30;
 
 
     void Start()
@@ -35,34 +41,39 @@ public class CheckpointManager : MonoBehaviour
 
     public void CP1reached()
     {
+        carHealth.checkpointHPRestore(CP1HealthRestore);
         checkpoint1.SetActive(false);
         checkpoint2.SetActive(true);
+        GameManager.Instance.CheckpointTime(1);
         Debug.Log("Checkpoint 1 reached");
     }
 
     public void CP2reached()
     {
+        carHealth.checkpointHPRestore(CP2HealthRestore);
         checkpoint2.SetActive(false);
         checkpoint3.SetActive(true);
+        GameManager.Instance.CheckpointTime(2);
         Debug.Log("Checkpoint 2 reached");
     }
 
     public void CP3reached()
     {
+        carHealth.checkpointHPRestore(CP3HealthRestore);
         checkpoint3.SetActive(false);
         checkpoint4.SetActive(true);
+        GameManager.Instance.CheckpointTime(3);
         Debug.Log("Checkpoint 3 reached");
     }
 
     public void CP4reached()
     {
+        carHealth.checkpointHPRestore(CP4HealthRestore);
         checkpoint4.SetActive(false);
         Debug.Log("Checkpoint 4 reached");
-        WinGame();
+        GameManager.Instance.CheckpointTime(4);
+        UIManager.Instance.WinGame();
     }
 
-    public void WinGame()
-    {
-        winscreen.SetActive(true);
-    }
+
 }
