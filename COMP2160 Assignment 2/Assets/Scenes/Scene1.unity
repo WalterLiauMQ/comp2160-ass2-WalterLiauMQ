@@ -5089,7 +5089,7 @@ PrefabInstance:
       objectReference: {fileID: 8555971582375439106, guid: 52f1a52f728a9ff40b837e0535765a98, type: 3}
     - target: {fileID: 527491445050715198, guid: d5eafc6bc7ec5844a87d4a08a8dd3fae, type: 3}
       propertyPath: smokeThreshold
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 527491445050715198, guid: d5eafc6bc7ec5844a87d4a08a8dd3fae, type: 3}
       propertyPath: explosionPrefab
