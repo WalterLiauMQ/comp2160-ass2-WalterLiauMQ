@@ -31,11 +31,6 @@ public class CheckpointManager : MonoBehaviour
         checkpoint4.SetActive(false);
     }
 
-    void Update()
-    {
-
-    }
-
     public void CP1reached()
     {
         carHealth.checkpointHPRestore(CP1HealthRestore);
