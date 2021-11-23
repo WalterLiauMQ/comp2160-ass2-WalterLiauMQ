@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class CarHealth : MonoBehaviour
 {
@@ -29,6 +30,11 @@ public class CarHealth : MonoBehaviour
     // Specifies the explosion particle system
     public GameObject explosionPrefab;
 
+    private float startTime;
+
+    public string collidedWith;
+    public GameObject player;
+
     // Car current HP (pub)
     public float CurrentHP
     {
@@ -41,6 +47,8 @@ public class CarHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startTime = Time.time;
+
         // Initializes HP
         currentHP = maxHP;
 
@@ -111,6 +119,15 @@ public class CarHealth : MonoBehaviour
         // Destroys Car if HP drops to 0
         if(currentHP <= 0)
         {
+            AnalyticsEvent.GameOver();
+            Analytics.CustomEvent("Death", new Dictionary<string, object>
+            {
+                {"Time", Time.time - startTime},
+                {"Position ", player.transform.position },
+                {"Collided with ", collidedWith }
+
+            });
+
             GameObject explosion = Instantiate(explosionPrefab.gameObject);
             explosion.transform.position = this.transform.position;
             UIManager.Instance.LoseGame();
@@ -118,4 +135,9 @@ public class CarHealth : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        collidedWith = collision.gameObject.name;
+        Debug.Log(collidedWith);
+    }
 }
