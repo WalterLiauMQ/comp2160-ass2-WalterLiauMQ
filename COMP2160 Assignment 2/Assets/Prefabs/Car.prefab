@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1982293806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1982293807}
+  m_Layer: 0
+  m_Name: target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1982293807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982293806}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5.42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 871963299283891848}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &180596767979734511
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,13 +139,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527491445050715186}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.17, y: 0.071, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 2682870036579595356}
   - {fileID: 2869962006778299175}
   - {fileID: 2113956258722431248}
+  - {fileID: 1982293807}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -130,8 +161,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3178982, y: 0.6219295, z: 2.495914}
-  m_Center: {x: 0.007797877, y: 0.49881548, z: -0.016366541}
+  m_Size: {x: 1.3178982, y: 0.3771402, z: 2.495914}
+  m_Center: {x: 0.007797877, y: 0.6212108, z: -0.016366541}
 --- !u!54 &527491445050715196
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -140,7 +171,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527491445050715186}
   serializedVersion: 2
-  m_Mass: 500
+  m_Mass: 300
   m_Drag: 0.5
   m_AngularDrag: 4
   m_UseGravity: 1
@@ -161,8 +192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carHP: {fileID: 527491445050715198}
-  motorForce: 5000
-  breakForce: 3000
+  motorForce: 250
+  breakForce: 5000
   maxSteeringAngle: 30
   frontLeftWheelCollider: {fileID: 2869962006203673616}
   frontRightWheelCollider: {fileID: 2869962007632650141}
@@ -193,7 +224,9 @@ MonoBehaviour:
   softCollisionThreshold: 1
   smokeThreshold: 50
   smoke: {fileID: 2113956258722431253}
-  explosionPrefab: {fileID: 0}
+  explosionPrefab: {fileID: 5072764635277147986, guid: 35ed5c7f7ce0ad14a85f73b83c66cc82, type: 3}
+  collidedWith: 
+  player: {fileID: 527491445050715186}
 --- !u!1 &2869962006203673622
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,8 +268,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.3
   m_SuspensionSpring:
-    spring: 90000
-    damper: 9000
+    spring: 50000
+    damper: 5000
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
@@ -296,8 +329,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.3
   m_SuspensionSpring:
-    spring: 90000
-    damper: 9000
+    spring: 50000
+    damper: 5000
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
@@ -454,8 +487,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.3
   m_SuspensionSpring:
-    spring: 90000
-    damper: 9000
+    spring: 50000
+    damper: 5000
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
@@ -549,8 +582,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.3
   m_SuspensionSpring:
-    spring: 90000
-    damper: 9000
+    spring: 50000
+    damper: 5000
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
