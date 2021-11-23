@@ -10,6 +10,9 @@ public class CameraTracking : MonoBehaviour
     public float tempY;
     public float tempZ;
 
+    public float smoothSpeed = 0.125f;
+    public Vector3 offset;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +21,17 @@ public class CameraTracking : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //        this.transform.position = car.gameObject.transform.position;
         //        this.transform.rotation = car.gameObject.transform.rotation;
-        this.transform.position = car.gameObject.transform.position;
+
+        Vector3 desiredPosition = car.gameObject.transform.position + offset;
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+        transform.position = smoothedPosition;
+
+
+//        this.transform.position = car.gameObject.transform.position;
 
         tempX = car.gameObject.transform.eulerAngles.x;
         tempY = car.gameObject.transform.eulerAngles.y;

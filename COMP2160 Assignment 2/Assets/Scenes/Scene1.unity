@@ -4246,27 +4246,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5975390467377114537, guid: eb18aa85e20969843a2949b97a127ebf, type: 3}
---- !u!1 &2123601729 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5457086513620226324, guid: 20b7ddb20130fb1438d70df2a5ae230b, type: 3}
-  m_PrefabInstance: {fileID: 1777031348}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &2123601732
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123601729}
-  serializedVersion: 2
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 64
-  m_CollisionDetection: 0
 --- !u!1 &2129125210
 GameObject:
   m_ObjectHideFlags: 0
