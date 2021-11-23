@@ -59,8 +59,8 @@ public class GameManager : MonoBehaviour
     }
 
     // Strings for seconds and milliseconds when they are < 10
-    public string secondsZeroed;
-    public string msZeroed;
+    private string secondsZeroed;
+    private string msZeroed;
 
     // Strings for time
     private string currentTime;
