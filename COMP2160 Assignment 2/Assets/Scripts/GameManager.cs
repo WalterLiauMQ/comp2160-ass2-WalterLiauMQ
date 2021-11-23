@@ -19,9 +19,9 @@ public class GameManager : MonoBehaviour
     }
 
     // Time
-    public float ms = 0;
-    public float seconds = 0;
-    public float minutes = 0;
+    private float ms = 0;
+    private float seconds = 0;
+    private float minutes = 0;
 
     // Timestamps for each checkpoint.
     private string cP1Time = "Incomplete";
@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
     {
         if (ms < 10)
         {
-            msZeroed = "0" + ms;
+            msZeroed = "0" + ms.ToString("F0");
         }
 
         else

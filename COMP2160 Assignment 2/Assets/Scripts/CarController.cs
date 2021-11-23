@@ -108,19 +108,19 @@ public class CarController : MonoBehaviour
         // Executes if a hard collision is detected
         if (collision.relativeVelocity.magnitude >= carHP.hardCollisionThreshold)
         {
-            carHP.HardCollision();
+            carHP.VeloCollision(2);
         }
 
         // Executes if a medium collision is detected
         if (collision.relativeVelocity.magnitude >= carHP.mediumCollisionThreshold && collision.relativeVelocity.magnitude < carHP.hardCollisionThreshold)
         {
-            carHP.MediumCollision();
+            carHP.VeloCollision(1);
         }
 
         // Executes if a soft collision is detected
         if (collision.relativeVelocity.magnitude >= carHP.softCollisionThreshold && collision.relativeVelocity.magnitude < carHP.mediumCollisionThreshold)
         {
-            carHP.SoftCollision();
+            carHP.VeloCollision(0);
         }
         
     }

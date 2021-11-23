@@ -64,24 +64,26 @@ public class CarHealth : MonoBehaviour
     }
 
     // Executes if hard collision is detected
-    public void HardCollision()
+    public void VeloCollision(int hardness)
     {
-        // Subtracts specified HP from current HP
-        currentHP -= hardCollisionDamage;
-    }
+        // Subtracts specified HP from current HP if hardness == 2
+        if(hardness == 2)
+        {
+            currentHP -= hardCollisionDamage;
+        }
+        
 
-    // Executes if medium collision is detected
-    public void MediumCollision()
-    {
-        // Subtracts specified HP from current HP
-        currentHP -= mediumCollisionDamage;
-    }
+        // Subtracts specified HP from current HP if hardness == 1
+        if(hardness == 1)
+        {
+            currentHP -= mediumCollisionDamage;
+        }
 
-    // Executes if soft collision is detected
-    public void SoftCollision()
-    {
-        // Subtracts specified HP from current HP
-        currentHP -= softCollisionDamage;
+        // Subtracts specified HP from current HP if hardness == 0
+        if (hardness == 0)
+        {
+            currentHP -= softCollisionDamage;
+        }
     }
 
     // Called by checkpoints to restore HP to Car when colliding with them.

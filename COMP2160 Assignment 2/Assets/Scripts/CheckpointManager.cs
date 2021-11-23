@@ -35,11 +35,6 @@ public class CheckpointManager : MonoBehaviour
         checkpoint4.SetActive(false);
     }
 
-    void Update()
-    {
-
-    }
-
     public void CP1reached()
     {
         Analytics.CustomEvent("Checkpoint reached", new Dictionary<string, object>
