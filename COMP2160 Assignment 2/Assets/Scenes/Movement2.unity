@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &753114431 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 871963299283891848, guid: d5eafc6bc7ec5844a87d4a08a8dd3fae, type: 3}
+  m_PrefabInstance: {fileID: 1811550150}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &837207682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -182,6 +187,10 @@ PrefabInstance:
       propertyPath: car
       value: 
       objectReference: {fileID: 936342948}
+    - target: {fileID: 5457086513620226331, guid: 20b7ddb20130fb1438d70df2a5ae230b, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 753114431}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20b7ddb20130fb1438d70df2a5ae230b, type: 3}
 --- !u!1 &837759324

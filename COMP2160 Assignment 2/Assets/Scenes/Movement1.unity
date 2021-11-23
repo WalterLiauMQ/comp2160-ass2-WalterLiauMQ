@@ -258,6 +258,10 @@ PrefabInstance:
       propertyPath: car
       value: 
       objectReference: {fileID: 1044657046}
+    - target: {fileID: 5457086513620226331, guid: 20b7ddb20130fb1438d70df2a5ae230b, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1937464370}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20b7ddb20130fb1438d70df2a5ae230b, type: 3}
 --- !u!1 &781754172
@@ -441,3 +445,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefec6fe3d8cf934585edf1b000bc4de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1937464370 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 871963299283891848, guid: d5eafc6bc7ec5844a87d4a08a8dd3fae, type: 3}
+  m_PrefabInstance: {fileID: 960924583}
+  m_PrefabAsset: {fileID: 0}
