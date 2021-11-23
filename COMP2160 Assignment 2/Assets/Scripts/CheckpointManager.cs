@@ -42,7 +42,7 @@ public class CheckpointManager : MonoBehaviour
 
     public void CP1reached()
     {
-        Analytics.CustomEvent("Checkpoint reached", new Dictionary<string, object>
+        Analytics.CustomEvent("Checkpoint 1 reached", new Dictionary<string, object>
         {
             {"Time", Time.time - startTime},
             {"Health ", carHealth.CurrentHP }
@@ -58,6 +58,13 @@ public class CheckpointManager : MonoBehaviour
 
     public void CP2reached()
     {
+        Analytics.CustomEvent("Checkpoint 2 reached", new Dictionary<string, object>
+        {
+            {"Time", Time.time - startTime},
+            {"Health ", carHealth.CurrentHP }
+
+        });
+
         carHealth.checkpointHPRestore(CP2HealthRestore);
         checkpoint2.SetActive(false);
         checkpoint3.SetActive(true);
@@ -67,6 +74,13 @@ public class CheckpointManager : MonoBehaviour
 
     public void CP3reached()
     {
+        Analytics.CustomEvent("Checkpoint 3 reached", new Dictionary<string, object>
+        {
+            {"Time", Time.time - startTime},
+            {"Health ", carHealth.CurrentHP }
+
+        });
+
         carHealth.checkpointHPRestore(CP3HealthRestore);
         checkpoint3.SetActive(false);
         checkpoint4.SetActive(true);
@@ -76,6 +90,13 @@ public class CheckpointManager : MonoBehaviour
 
     public void CP4reached()
     {
+        Analytics.CustomEvent("Checkpoint 4 reached", new Dictionary<string, object>
+        {
+            {"Time", Time.time - startTime},
+            {"Health ", carHealth.CurrentHP }
+
+        });
+
         carHealth.checkpointHPRestore(CP4HealthRestore);
         checkpoint4.SetActive(false);
         Debug.Log("Checkpoint 4 reached");
